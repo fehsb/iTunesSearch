@@ -57,7 +57,7 @@ iTunesManager *itunes;
     Filme *filme = [midias objectAtIndex:indexPath.row];
     
     [celula.nome setText:filme.nome];
-    [celula.tipo setText:@"Filme"];
+    [celula.tipo setText:NSLocalizedString(filme.tipo,nil)];
     [celula.artista setText:filme.artista];
     [celula.pais setText:filme.pais];
     [celula.duracao setText:[filme.duracao stringValue]];
