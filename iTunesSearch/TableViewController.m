@@ -19,6 +19,8 @@
 
 @implementation TableViewController
 
+@synthesize search;
+iTunesManager *itunes;
 
 
 - (void)viewDidLoad {
@@ -26,12 +28,12 @@
     
     UINib *nib = [UINib nibWithNibName:@"TableViewCell" bundle:nil];
     [self.tableview registerNib:nib forCellReuseIdentifier:@"celulaPadrao"];
+    [search setDelegate:self];
     
-    iTunesManager *itunes = [iTunesManager sharedInstance];
-    midias = [itunes buscarMidias:@"Apple"];
+    itunes = [iTunesManager sharedInstance];
+
     
-#warning Necessario para que a table view tenha um espaco em relacao ao topo, pois caso contrario o texto ficara atras da barra superior
-    self.tableview.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableview.bounds.size.width, 15.f)];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,5 +68,14 @@
     return 70;
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    midias = [itunes buscarMidias:searchBar.text];
+    [self.tableview reloadData];
+}
 
+- (IBAction)buscar:(id)sender {
+    midias = [itunes buscarMidias:search.text];
+    [self.tableview reloadData];
+}
 @end

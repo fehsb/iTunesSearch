@@ -12,6 +12,9 @@
 
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
+@property (weak, nonatomic) IBOutlet UISearchBar *search;
+
+- (IBAction)buscar:(id)sender;
 
 @end
 
