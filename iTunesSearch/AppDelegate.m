@@ -10,6 +10,7 @@
 
 #warning Classe importada para uso no metodo de inicilizacao da App
 #import "TableViewController.h"
+#import "Desc.h"
 
 @interface AppDelegate ()
 
@@ -30,6 +31,12 @@
     TableViewController *tvc = [[TableViewController alloc] init];
     [self.window setRootViewController:tvc];
     [self.window makeKeyAndVisible];
+    self.navigation = [[UINavigationController alloc] initWithRootViewController:[[Desc alloc] initWithNibName:@"Desc" bundle:nil]];
+    
+    [self.window makeKeyAndVisible];
+    
+    self.window.rootViewController = self.navigation;
+    
     return YES;
 }
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewController">
+            <connections>
+                <outlet property="search" destination="a3Y-l6-JRV" id="QcS-jH-wpR"/>
+                <outlet property="tableview" destination="z24-IP-C1d" id="fiF-7d-ri3"/>
+                <outlet property="view" destination="z24-IP-C1d" id="NXu-VO-9o4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="z24-IP-C1d">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <view key="tableHeaderView" contentMode="scaleToFill" id="0I6-2v-t4L">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WQ-PH-NlX">
+                        <rect key="frame" x="472" y="12" width="90" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <state key="normal" title="Search">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="buscar:" destination="-1" eventType="touchUpInside" id="2Hb-cU-zt4"/>
+                        </connections>
+                    </button>
+                    <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3Y-l6-JRV">
+                        <rect key="frame" x="8" y="5" width="438" height="44"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="5WQ-PH-NlX" firstAttribute="top" secondItem="0I6-2v-t4L" secondAttribute="top" constant="12" id="4dQ-hX-1R8"/>
+                    <constraint firstAttribute="bottom" secondItem="a3Y-l6-JRV" secondAttribute="bottom" constant="9" id="7pv-rT-5LI"/>
+                    <constraint firstItem="a3Y-l6-JRV" firstAttribute="top" secondItem="0I6-2v-t4L" secondAttribute="top" constant="5" id="U3M-lp-Pby">
+                        <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                    </constraint>
+                    <constraint firstAttribute="bottom" secondItem="5WQ-PH-NlX" secondAttribute="bottom" constant="16" id="aWt-kN-9ao"/>
+                    <constraint firstItem="a3Y-l6-JRV" firstAttribute="leading" secondItem="0I6-2v-t4L" secondAttribute="leading" constant="8" id="dxF-yD-PoG"/>
+                    <constraint firstAttribute="trailing" secondItem="5WQ-PH-NlX" secondAttribute="trailing" constant="38" id="lSd-cm-Gq0"/>
+                    <constraint firstItem="5WQ-PH-NlX" firstAttribute="leading" secondItem="a3Y-l6-JRV" secondAttribute="trailing" constant="26" id="pxj-Yd-m5L"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="dataSource" destination="-1" id="grn-Rq-4Ux"/>
+                <outlet property="delegate" destination="-1" id="M2x-yu-OMO"/>
+            </connections>
+            <point key="canvasLocation" x="-135" y="440"/>
+        </tableView>
+    </objects>
+</document>

@@ -117,7 +117,6 @@ iTunesManager *itunes;
     
     switch (section)
     {
-        
         case 0:
             sectionName =@"Podcast";
             break;
