@@ -13,9 +13,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *nome;
 @property (weak, nonatomic) IBOutlet UILabel *tipo;
 @property (weak, nonatomic) IBOutlet UILabel *artista;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *pais;
-@property (weak, nonatomic) IBOutlet UILabel *duracao;
+//@property (weak, nonatomic) IBOutlet UILabel *duracao;
 
 
-
+-(void) carregaImagens:(NSString *)url;
 @end

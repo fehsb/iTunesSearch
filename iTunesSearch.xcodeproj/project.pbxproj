@@ -22,6 +22,7 @@
 		D45A99E01AAF89A80020E5C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D45A99E21AAF89A80020E5C2 /* Localizable.strings */; };
 		D45A99E71AB0C43D0020E5C2 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = D45A99E61AB0C43D0020E5C2 /* Music.m */; };
 		D45A99EA1AB0C4B90020E5C2 /* Podcasts.m in Sources */ = {isa = PBXBuildFile; fileRef = D45A99E91AB0C4B90020E5C2 /* Podcasts.m */; };
+		D45E621A1AB38A45001859F0 /* Mae.m in Sources */ = {isa = PBXBuildFile; fileRef = D45E62191AB38A45001859F0 /* Mae.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		D45A99E61AB0C43D0020E5C2 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Music.m; path = Entidades/Music.m; sourceTree = "<group>"; };
 		D45A99E81AB0C4B90020E5C2 /* Podcasts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Podcasts.h; path = Entidades/Podcasts.h; sourceTree = "<group>"; };
 		D45A99E91AB0C4B90020E5C2 /* Podcasts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Podcasts.m; path = Entidades/Podcasts.m; sourceTree = "<group>"; };
+		D45E62181AB38A45001859F0 /* Mae.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mae.h; path = Entidades/Mae.h; sourceTree = "<group>"; };
+		D45E62191AB38A45001859F0 /* Mae.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mae.m; path = Entidades/Mae.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				D45A99E61AB0C43D0020E5C2 /* Music.m */,
 				D45A99E81AB0C4B90020E5C2 /* Podcasts.h */,
 				D45A99E91AB0C4B90020E5C2 /* Podcasts.m */,
+				D45E62181AB38A45001859F0 /* Mae.h */,
+				D45E62191AB38A45001859F0 /* Mae.m */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				D45A99EA1AB0C4B90020E5C2 /* Podcasts.m in Sources */,
 				D427D3491AB24030009954B9 /* Desc.m in Sources */,
 				92C21CB61AAE757A0052ABE6 /* main.m in Sources */,
+				D45E621A1AB38A45001859F0 /* Mae.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

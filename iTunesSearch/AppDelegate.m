@@ -27,15 +27,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
 #warning Adicionado codigo para iniciar com a interface do TableView
-//    TableViewController *tvc = [[TableViewController alloc] initWithNibName:@"TableView" bundle:nil];
+ //   TableViewController *tvc = [[TableViewController alloc] initWithNibName:@"TableView" bundle:nil];
     TableViewController *tvc = [[TableViewController alloc] init];
-    [self.window setRootViewController:tvc];
+    
+    UINavigationController *tableViewNavigation = [[UINavigationController alloc]initWithRootViewController:tvc];
+    
+    
+    
+    [self.window setRootViewController:tableViewNavigation];
     [self.window makeKeyAndVisible];
     self.navigation = [[UINavigationController alloc] initWithRootViewController:[[Desc alloc] initWithNibName:@"Desc" bundle:nil]];
     
     [self.window makeKeyAndVisible];
     
-    self.window.rootViewController = self.navigation;
+   // self.window.rootViewController = self.navigation;
     
     return YES;
 }

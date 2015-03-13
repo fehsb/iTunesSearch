@@ -12,6 +12,7 @@
 #import "Entidades/Filme.h"
 #import "Entidades/Podcasts.h"
 #import "Entidades/Music.h"
+#import "Desc.h"
 
 @interface TableViewController () {
     NSArray *midias;
@@ -48,7 +49,31 @@ iTunesManager *itunes;
 #pragma mark - Metodos do UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //NSUInteger qtd = midias.count;
-    return 3;
+    
+    return [midias count];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    Desc *dView = [[Desc alloc]init];
+    
+    if (indexPath.section == 0){
+        Podcasts *x = [[midias objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:dView animated:YES];
+            dView.m = x;
+    }
+    if (indexPath.section == 1){
+        Filme *x = [[midias objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:dView animated:YES];
+        dView.m = x;
+    }
+    if (indexPath.section == 0){
+        Music *x = [[midias objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:dView animated:YES];
+        dView.m = x;
+    }
+  
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -82,7 +107,8 @@ iTunesManager *itunes;
         [celula.tipo setText:NSLocalizedString(podcast.tipo,nil)];
         [celula.artista setText:podcast.artista];
         [celula.pais setText:podcast.pais];
-        [celula.duracao setText:[podcast.duracao stringValue]];
+        [celula carregaImagens:podcast.img];
+       // [celula.duracao setText:[podcast.duracao stringValue]];
     }
     
     if (indexPath.section == 1){
@@ -93,7 +119,8 @@ iTunesManager *itunes;
         [celula.tipo setText:NSLocalizedString(filme.tipo,nil)];
         [celula.artista setText:filme.artista];
         [celula.pais setText:filme.pais];
-        [celula.duracao setText:[filme.duracao stringValue]];
+        [celula carregaImagens:filme.img];
+       // [celula.duracao setText:[filme.duracao stringValue]];
     }
     
     if (indexPath.section == 2){
@@ -104,7 +131,8 @@ iTunesManager *itunes;
         [celula.tipo setText:NSLocalizedString(music.tipo,nil)];
         [celula.artista setText:music.artista];
         [celula.pais setText:music.pais];
-        [celula.duracao setText:[music.duracao stringValue]];
+        [celula carregaImagens:music.img];
+        //[celula.duracao setText:[music.duracao stringValue]];
     }
     
     

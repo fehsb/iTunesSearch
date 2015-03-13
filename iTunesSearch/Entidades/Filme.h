@@ -7,15 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Mae.h"
 
-@interface Filme : NSObject
+@interface Filme : Mae
 
-@property (nonatomic, strong) NSString *nome;
-@property (nonatomic, strong) NSString *trackId;
-@property (nonatomic, strong) NSString *artista;
-@property (nonatomic, strong) NSNumber *duracao;
-@property (nonatomic, strong) NSString *genero;
-@property (nonatomic, strong) NSString *pais;
-@property (nonatomic, strong) NSString *tipo;
+
 
 @end

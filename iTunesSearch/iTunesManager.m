@@ -71,6 +71,7 @@ static bool isFirstAccess = YES;
                 [filme setGenero:[item objectForKey:@"primaryGenreName"]];
                 [filme setPais:[item objectForKey:@"country"]];
                 [filme setTipo:[item objectForKey:@"kind"]];
+                [filme setImg:[item objectForKey:@"artworkUrl100"]];
                 [filmes addObject:filme];
             
         }
@@ -84,6 +85,7 @@ static bool isFirstAccess = YES;
             [musica setGenero:[item objectForKey:@"primaryGenreName"]];
             [musica setPais:[item objectForKey:@"country"]];
             [musica setTipo:[item objectForKey:@"kind"]];
+            [musica setImg:[item objectForKey:@"artworkUrl100"]];
             [musicas addObject:musica];
             
         }
@@ -98,11 +100,13 @@ static bool isFirstAccess = YES;
             [podcast setGenero:[item objectForKey:@"primaryGenreName"]];
             [podcast setPais:[item objectForKey:@"country"]];
             [podcast setTipo:[item objectForKey:@"kind"]];
+            [podcast setImg:[item objectForKey:@"artworkUrl100"]];
             [podcasts addObject:podcast];
             
         }
         
     }
+    
     
     NSArray *midiasArray = [[NSArray alloc]initWithObjects:podcasts,filmes,musicas, nil];
         return midiasArray;
